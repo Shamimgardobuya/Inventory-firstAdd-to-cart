@@ -69,7 +69,7 @@ elif ((good=="gaming") and (item=="Nintendo switch")):
     print(gaming["Digital games "]["Nintendo switch"], f" is the number ")
 elif good=="gaming" and item=="xBox" :
     print(gaming["Digital games"]["xbox360"], f" is the  number of xbox present")
-elif good=="gaming" and item=="Nintendo 3ds" :
+elif good=="gaming" and item=="Nintendo 3dss" :
     print(gaming["Nintendo"]["Nintendo 3DS"], f" is the  number of Nintendo 3DS")
     
     
