@@ -61,7 +61,7 @@ elif good==(("health_beauty" or "health and beauty")  and (item=="childrens dent
 elif good==(("health_beauty" or "health and beauty")  and (item=="mouthwash" or "Mouthwash")):
     print(health_beauty["Oral care"]["Mouthwash"], f" are the number for mouthwash")
 
-if ((good=="gaming") and item==("Playstation3" or "playstation3")) :
+if ((good=="gaming") and item==("Playstation3" or "playstation3" or "playstation3")) :
     print(gaming["PlayStation"]["playstation3"], f" is the number of Playstation3 present")
 elif ((good=="gaming") and (item=="Playstation4" )):
     print(gaming["PlayStation"]["playstation4"], f" is the number of Playstation4 present")
