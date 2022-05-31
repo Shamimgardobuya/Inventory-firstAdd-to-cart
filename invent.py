@@ -3,28 +3,46 @@
 #store the subtopic of the goods as key of the dictionary
 #Create another dictionary for the values of the key to cover the specific name of items
 #Add the number of the items specifically 
-#
+  # create empty dictionary
+  # User to select goog and number of value.
 
 health_beauty={"Hair":{"conditioner":4,"Wigs":56,"Accessories":34,"Fragrances":13},"Makeup":{"Eyes":57,"lips":87,"face":34},"Oral care":{"children's Dental care":23,"Dental kits":23,"Mouthwash":45}}
 gaming={"PlayStation":{"playstation3":4,"playstation4":14},"Digital games":{"Nintendo switch":18,"Xbox360":4},"Nintendo":{"Nintendo 3DS":2}}
 fashion={"men's fashion":{"shirts":20,"tanks":12,"pants":67},"women's fashion":{"dresses":34,"Jewelery":1000},"baby":{"baby boys":23,"baby girls":46}}
 electronics={"televisions":{"Smart Tvs":12,"Data projectors":12},"cameras":{"compact cameras":14,"SLR Cameras":17},"Home Audio":{"Sony Speakers":56,"sound bars":8}}
 garden_outdoor={"Garden":{"Hand Tools":23},"Outdoor":{"Lighting":56}}
-print(f"these are the products we have for health and beauty",health_beauty)
-print(f"these are the products we have for Gaming",gaming)
-print(f"these are the products we have for Fashion ",fashion)
-print(f"these are the products we have for Electronics",electronics)
-print(f"these are the products we have for Garden and Outdoor",garden_outdoor)
 
-
+zuenah=input("Enter a number")
+if zuenah==1:
+    print(health_beauty,f"these are the products we have for health and beauty")
+elif zuenah==2:
+    print(gaming,f"are the items we have for gaming")
+elif zuenah==3:
+    print(fashion)
+elif zuenah==4:
+    print(electronics)
+elif zuenah==5:
+    print(garden_outdoor)
+    
+    
 good=health_beauty or gaming or fashion or electronics or garden_outdoor
 good=str(input("Enter a good  "))
 item=str(input("Enter the item that you would like to see "))
+p="yes" or "no"
+w={}
 if good=="health_beauty" or "health and beauty" and item=="Hair":
     print(health_beauty["Hair"])
 elif good==(("health_beauty" or "health and beauty") and (item=="conditioner")):
     print(health_beauty["Hair"]["conditioner"], f"Is the number of conditioners")
-elif good==(("health_beauty" or "health and beauty") and (item=="Wigs")):
+    p=str=input("Would you like to buy some conditioners? ")
+if p=="yes":
+    z=int(input("Enter the number of goods you would like to buy "))
+    health_beauty["conditioner"]=4-z  #reduced value of dictionary
+    w["Conditioner"]=z                 #new dictionary
+    print(f"{w} has been added to your cart")  #Added item to dictionary.
+elif p=="no":
+    print("Try other goods")
+elif good==(("health_beauty" or "health and beauty" or "health" or "beauty") and (item=="Wigs")):
     print(health_beauty["Hair"]["Wigs"], f"Are the numbers of wigs")
 elif good==(("health_beauty" or "health and beauty") and (item=="Accessories")):
     print(health_beauty["Hair"]["Accessories"], f"Are the numbers of accessories")
@@ -56,7 +74,7 @@ elif good=="gaming" and item=="Nintendo 3ds" :
     
     
 elif ((good=="fashion")  and (item=="Women's fashion")) :
-    print(fashion["women's fashion"], f" women's fashion you purchased")
+    print(fashion["women's fashion"], f" are the  women's fashion you purchased")
 elif good=="fashion"  and item=="men's fashion" :
     print(fashion["men's fashion"])
 elif good==(("fashion"  )and (item=="dresses" or "women's dress" )):
